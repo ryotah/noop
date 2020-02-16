@@ -1,12 +1,16 @@
 {
-  "name": "noop",
+  "name": "@ryotah/noop",
   "version": "1.0.0",
   "description": "Does nothing",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "lib/index.js",
+  "files": [
+    "index.ts",
+    "lib"
+  ],
   "scripts": {
+    "build": "tsc",
     "prebuild": "eslint index.ts && rm -rf lib",
-    "build": "tsc"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
